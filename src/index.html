@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gradient-to-r from-sky-500  to-indigo-500 overflow-x-hidden ">
+    <main>
+        <div class="container p-4">
+            <h1 class="text-center text-5xl font-serif font-bold mb-5 pb-28 ">Weather Forecast App</h1>
+            <div class="flex justify-center mb-4">
+                <input type="text" id="searchCity" placeholder="Enter City" class="w-56 py-1.5 px-4 text-left font-medium border rounded-lg mr-3">
+                <button id="searchBtn" class="bg-gradient-to-r from-blue-800 to-black text-white font-medium px-4 hover:from-pink-500 hover:to-red-600 rounded-lg ">Search</button>
+            </div>
+
+            <!--Current loc and Recent City buttons-->
+            <div class="flex justify-center">
+                <button id="locationBtn" class="bg-black text-white font-medium px-4 py-2 rounded-lg mb-5 ">Current location</button>
+                <div id=recentCity class="pl-4 ">
+                    <span class="font-medium hidden">Recent Cities</span>
+                    <select id="recentCitieS" class="border rounded px-2 py-0.5 cursor-pointer hidden"></select>
+                </div>
+            </div>
+            <center>
+                <div id="error" class="hidden"></div>
+            </center>
+
+            <!--Today Weather-->
+            <div id="weather-content" class="flex justify-center mb-4">
+            <div id="weather-data" class="flex flex-col items-center text-lg mb-2 w-82 p-4" >  </div>
+            </div>
+
+            <!--5 days forecast-->
+            <div id="extended-forecast" class="grid mt-2 md:grid-cols-5 lg:grid-cols-5 sm:grid-cols-1 gap-2 lg:gap-4"></div>
+        </div>    
+    </main>
+</body>
+</html>
